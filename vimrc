@@ -2,6 +2,22 @@
 " Maintainer:   Tim Pope <http://tpo.pe/>
 " Version:      1.1
 
+"Set no compat 
+set nocompatible
+
+" Setup Vundle
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+
+call vundle#end()
+filetype plugin indent on
+" End of Vundle setup
+
 if exists('g:loaded_sensible') || &compatible
   finish
 else
