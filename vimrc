@@ -12,7 +12,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-
+Plugin 'fatih/vim-go.git'
 
 call vundle#end()
 filetype plugin indent on
