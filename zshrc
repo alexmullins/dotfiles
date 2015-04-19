@@ -59,6 +59,11 @@ export PATH="/usr/local/bin:$GOPATH/bin:$ANACONDA/bin:/usr/bin:/bin:/usr/sbin:/s
 
 source $ZSH/oh-my-zsh.sh
 
+# Set up rbenv
+if which rbenv > /dev/null; then
+	eval "$(rbenv init -)";
+fi
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
