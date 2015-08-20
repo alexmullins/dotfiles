@@ -54,7 +54,7 @@ export GS=$GOPATH/src
 export GW=$GS/github.com/alexmullins
 export ANACONDA=$HOME/anaconda
 
-export PATH="/usr/local/bin:$GOPATH/bin:$ANACONDA/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/go/libexec/bin"
+export PATH="/usr/local/bin:$GOPATH/bin:$ANACONDA/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PROJ/goroot/go1.5/go/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
