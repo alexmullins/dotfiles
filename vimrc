@@ -13,6 +13,8 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go.git'
+Plugin 'tpope/vim-fugitive'
+Plugin 'fatih/molokai'
 
 call vundle#end()
 filetype plugin indent on
@@ -112,3 +114,60 @@ inoremap <C-U> <C-G>u<C-U>
 
 " Custom Settings
 imap jk <Esc>
+colorscheme molokai
+let g:molokai_original=1
+set showcmd
+set showmode
+set noswapfile
+set nobackup
+set splitright
+set splitbelow
+set hidden
+set hlsearch
+set ignorecase
+set smartcase
+set nocursorcolumn
+set nocursorline
+let mapleader = ","
+let g:mapleader = ","
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+nmap <leader>w :w!<cr>
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gp :Gpush<CR>
+vnoremap <leader>gb :Gblame<CR>
+
+let g:go_fmt_fail_silently = 0
+let g:go_fmt_command = "goimports"
+let g:go_autodetect_gopath = 1
+
+let g:go_highlight_space_tab_error = 0
+let g:go_highlight_array_whitespace_error = 0
+let g:go_highlight_trailing_whitespace_error = 0
+let g:go_highlight_extra_types = 0
+let g:go_highlight_operators = 0
+
+au FileType go nmap <Leader>s <Plug>(go-def-split)
+au FileType go nmap <Leader>v <Plug>(go-def-vertical)
+au FileType go nmap <Leader>in <Plug>(go-info)
+au FileType go nmap <Leader>ii <Plug>(go-implements)
+
+au FileType go nmap <leader>r  <Plug>(go-run)
+au FileType go nmap <leader>b  <Plug>(go-build)
+au FileType go nmap <leader>g  <Plug>(go-gbbuild)
+au FileType go nmap <leader>t  <Plug>(go-test-compile)
+au FileType go nmap <Leader>d <Plug>(go-doc)
+au FileType go nmap <Leader>f :GoImports<CR>
+
+map <D-1> 1gt
+map <D-2> 2gt
+map <D-3> 3gt
+map <D-4> 4gt
+map <D-5> 5gt
+map <D-6> 6gt
+map <D-7> 7gt
+map <D-8> 8gt
+map <D-9> 9gt
