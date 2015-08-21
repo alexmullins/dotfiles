@@ -14,7 +14,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go.git'
 Plugin 'tpope/vim-fugitive'
-Plugin 'fatih/molokai'
+Plugin 'itchyny/lightline.vim'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
@@ -114,10 +115,9 @@ inoremap <C-U> <C-G>u<C-U>
 
 " Custom Settings
 imap jk <Esc>
-colorscheme molokai
-let g:molokai_original=1
-set showcmd
-set showmode
+let g:solarized_termcolors=256
+colorscheme solarized
+set noshowmode
 set noswapfile
 set nobackup
 set splitright
@@ -171,3 +171,11 @@ map <D-6> 6gt
 map <D-7> 7gt
 map <D-8> 8gt
 map <D-9> 9gt
+
+nnoremap <leader><space> :nohlsearch<CR>
+
+if has('gui_running')
+	set background=light
+else
+	set background=dark
+endif
