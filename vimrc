@@ -13,9 +13,11 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'fatih/vim-go.git'
+Plugin 'fatih/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'itchyny/lightline.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-vinegar'
 
 call vundle#end()
 filetype plugin indent on
@@ -115,8 +117,7 @@ inoremap <C-U> <C-G>u<C-U>
 
 " Custom Settings
 imap jk <Esc>
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme molokai
 set noshowmode
 set noswapfile
 set nobackup
