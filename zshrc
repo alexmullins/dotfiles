@@ -55,8 +55,10 @@ export GW=$GS/github.com/alexmullins
 export ANACONDA=$HOME/anaconda
 export GOROOT_BOOTSTRAP=$PROJ/goroot/go1.4/go
 
-export PATH="/usr/local/bin:$GOPATH/bin:$ANACONDA/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PROJ/goroot/go1.5/go/bin:/Users/alexmullins/.cargo/bin"
+export PATH="$GOPATH/bin:$ANACONDA/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PROJ/goroot/go1.5/go/bin:/Users/alexmullins/.cargo/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
+
+export RUST_SRC_PATH=$PROJ/rust-src/src
 
 source $ZSH/oh-my-zsh.sh
 
